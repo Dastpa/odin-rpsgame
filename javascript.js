@@ -10,27 +10,28 @@ function computerPlay() {
     }
 }
 
-function playRound(player, computer) {
-    switch (player) {
+function playRound(plPick, cpPick) {
+    switch (plPick) {
         case "rock":
-            if (computer === "scissors") return 0;
-            if (computer === "rock") return 1;
+            if (cpPick === "scissors") return 0;
+            if (cpPick === "rock") return 1;
             return 2;
         case "paper":
-            if (computer === "rock") return 0;
-            if (computer === "paper") return 1;
+            if (cpPick === "rock") return 0;
+            if (cpPick === "paper") return 1;
             return 2;
         case "scissors":
-            if (computer === "paper") return 0;
-            if (computer === "scissors") return 1;
+            if (cpPick === "paper") return 0;
+            if (cpPick === "scissors") return 1;
             return 2;
     }
 }
 
 let compScore = 0;
 let playerScore = 0;
+let i = 0
 
-for (let i = 0; i < 5; i) {
+function game() {
     const PLAYER_SELECT = prompt("Rock, Paper, Scissors?")
     const COMP_SELECT = computerPlay();
 
@@ -50,6 +51,10 @@ for (let i = 0; i < 5; i) {
         i++;
         compScore++;
     }
+}
+
+for (i ; i < 5; i) {
+    game();
 }
 
 console.log(`Final Score: Player ${playerScore} - ${compScore} Computer`)
