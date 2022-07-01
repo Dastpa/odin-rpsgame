@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'roboto';
+    src: url(/fonts/roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'roboto-bold';
+    src: url(/fonts/roboto/Roboto-Bold.ttf);
+}
+
+* {
+    font-family: 'roboto';
+    color: #c9ffe2;
+    border: 0px lime dashed;
+}
+
+html,
+body {
+    margin: 0;
+    height: 100vh;
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.header,
+.footer {
+    flex: none;
+    background-color: #7dd181;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    height: 100px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'roboto-bold';
+    font-size: 24px;
+    margin: 0;
+    padding: 12px;
+    border: #c9ffe2 1px solid;
+    border-radius: 4px;
+}
+
+.content  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b6f9c9;
+    margin: 0;
+    height: calc(100vh - 198px);
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'roboto-bold';
+    font-weight: bold;
+    height: 50px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 50px;
+    border-radius: 5px;
+    border: #c9ffe2 5px solid;
+    background-color: #4b7f52;
+    
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+.game-button {
+    width: 120px;
+    height: 100px;
+    background-color: transparent;
+    border: #c9ffe2 2px solid;
+    border-radius: 5px;
+}
+
+.score {
+    text-align: center;
+    font-size: 40px;
+}

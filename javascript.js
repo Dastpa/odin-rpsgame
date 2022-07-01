@@ -1,3 +1,7 @@
+let compScore = 0;
+let playerScore = 0;
+let i = 0
+
 function computerPlay() {
     let actionValue = Math.floor(Math.random() * 3);
     switch (actionValue){
@@ -27,12 +31,8 @@ function playRound(plPick, cpPick) {
     }
 }
 
-let compScore = 0;
-let playerScore = 0;
-let i = 0
-
-function game() {
-    const PLAYER_SELECT = prompt("Rock, Paper, Scissors?")
+function game(pSelect) {
+    const PLAYER_SELECT = pSelect;
     const COMP_SELECT = computerPlay();
 
     console.log(`Computer Selects: ${COMP_SELECT}`)
@@ -53,10 +53,19 @@ function game() {
     }
 }
 
-for (i ; i < 5; i) {
+const buttons = document.querySelectorAll('.game-button');
+
+buttons.forEach((btn) => {
+    btn.addEventListener('click', function (e) {
+        game(e.target.id);
+    })
+})
+
+const txtScore = document.querySelector(".score")
+
+
+for (i ; i < 0; i) {
     game();
 }
-
-console.log(`Final Score: Player ${playerScore} - ${compScore} Computer`)
 
 playerScore > compScore ? console.log("Player Wins Overall!") : console.log("Computer Wins Overall!");
